@@ -4,13 +4,16 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.6.2",
     "express": "^4.17.1",
-    "yelp-fusion": "^3.0.0"
+    "yelp-fusion": "^3.0.0",
+      },
+  "engines": {
+    "node":"10.16.0"
   }
 }

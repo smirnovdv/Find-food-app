@@ -11,7 +11,7 @@ const app = express();
 const yelp = require('yelp-fusion');
 const client = yelp.client('PPTr_crOO4P-W4rx7jJXTQsU3kc6pJpJugCbo8yfwMh2jnUOzhXambkkTjYuNOkzAJjGd1v56DPXZ0b_3KumUO7u3k_EcaZ-bBjacfmm-DFlNfkMsY2OP4FoRw85XXYx');
  
-const port = process.env.PORT || 3000
+app.set('port',(process.env.PORT || 3000))
 
 app.get("/", (req, res) => {
     res.render("home.ejs");
@@ -35,6 +35,6 @@ app.get("/results", (req, res) => {
 
 app.use(express.static('public'))
 
-app.listen(port, ()=> {
-  console.log("Server running on port "+ port)
+app.listen(app.get('port'), ()=> {
+  console.log("Server running on port ")
 })
