@@ -1,0 +1,28 @@
+<% include partials/header.ejs%>
+
+<div class="container mx-auto" >
+    <table class="table">
+    <thead class="table table-active">
+        <tr>
+        <th scope="row">Name</th>
+        <th scope="row">Distance</th>
+        <th scope="row">Rating</th>
+
+  
+
+        </tr> 
+     </thead>
+        <%for (i in data) {%>
+        
+        <tr scope="row">
+        <td><a  href="<%= data[i].url %>"><%=data[i].name%></a></td>
+        <td><%=(data[i].distance/1000).toFixed(2)+"km"%></td>
+        <td> <img src="regular_<%=data[i].rating%>.png" alt="stars"> </td>
+        </tr>
+
+        <%};%>
+    </table>
+
+</div>
+
+<% include partials/footer.ejs%>
